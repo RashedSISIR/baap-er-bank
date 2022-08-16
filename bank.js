@@ -29,18 +29,31 @@ document.getElementById('button-field').addEventListener('click',function(){
    const newWithdrawString=withdrawField.value;
    const newWithdrawAmmount=parseFloat(newWithdrawString);
    
+   withdrawField.value='';
+   if(isNaN(newWithdrawAmmount)){
+      alert('Please Enter Valid Number')
+      return;
+   }
+   
    const withdrawInput=document.getElementById('withdraw-total');
    const withdrawValue=withdrawInput.innerText;
    const withdrawString=parseFloat(withdrawValue);
+  
 
-   const totalWithdraw=newWithdrawAmmount+withdrawString;
-   withdrawInput.innerText=totalWithdraw;
+  
   
    const ballanceField=document.getElementById('ballance-field');
    const ballanceValue=ballanceField.innerText;
    const ballancestring=parseFloat(ballanceValue);
+   
+   if(newWithdrawAmmount>ballancestring){
+      alert ('insufficient balance')
+      return;
+   }
+   const totalWithdraw=newWithdrawAmmount+withdrawString;
+   withdrawInput.innerText=totalWithdraw;
    const totalWithdrawAmmount=ballancestring-totalWithdraw;
    ballanceField.innerText=totalWithdrawAmmount;
-   withdrawField.value='';
+   
 }
 )

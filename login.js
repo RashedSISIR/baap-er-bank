@@ -9,4 +9,7 @@ document.getElementById('btn-field').addEventListener('click',function(){
     if(email==='sneha@gmail.com'&& password==='123456'){
         window.location.href='bank.html'
     }
+    else{
+        alert('Incorrect user!'.style.ba)
+    }
 })
