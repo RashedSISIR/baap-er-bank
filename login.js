@@ -10,6 +10,6 @@ document.getElementById('btn-field').addEventListener('click',function(){
         window.location.href='bank.html'
     }
     else{
-        alert('Incorrect user!'.style.ba)
+        alert('Incorrect user!')
     }
 })
