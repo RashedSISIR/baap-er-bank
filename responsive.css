@@ -1,0 +1,10 @@
+@media (max-width:576px) {
+    .responsive-h1{
+        font-size:1.5rem;
+    }
+    .grid-responsive,.grid-responsive-2{
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}
